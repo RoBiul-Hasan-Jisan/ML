@@ -8,6 +8,8 @@ import {
   useLocation,
 } from "react-router-dom";
 
+import Header from "./Header";
+
 // Import your ML pages
 import MLIntroduction from "./MLslidepages/MLIntroduction";
 import MLSupervised from "./MLslidepages/MLSupervised";
@@ -119,30 +121,29 @@ function Sidebar() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  return (
-    <div className="flex min-h-screen relative">
+return (
+  <>
+    <Header />
+    <div className="pt-20 flex min-h-screen relative">
       {/* Hamburger button (only on mobile) */}
       {isMobile && (
-           <button
+        <button
   onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-  className="fixed top-4 left-4 z-50 bg-transparent rounded-md shadow-md flex items-center justify-center"
-  style={{ width: '32px', height: '32px' }}
+  className="fixed top-16 left-4 z-50 bg-transparent rounded-md shadow-md flex items-center justify-center"
+  style={{ width: "32px", height: "32px" }}
   aria-label="Toggle Menu"
 >
-  <svg
-    className="w-5 h-5 text-blue"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-  </svg>
-</button>
-
-
+          <svg
+            className="w-5 h-5 text-blue"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       )}
 
       {/* Sidebar */}
@@ -179,15 +180,20 @@ function Sidebar() {
         </Routes>
       </main>
     </div>
-  );
+  </>
+);
+
 }
 
 
 // Main App wrapper
 export default function App() {
   return (
+    
     <Router>
+
       <AppContent />
     </Router>
+    
   );
 }

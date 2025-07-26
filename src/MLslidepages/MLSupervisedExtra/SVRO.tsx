@@ -1,9 +1,9 @@
-//import React from "react";
+// import React from "react";
 
 const SVROverview = () => {
   return (
-        <div className="max-w-5xl mx-auto p-6 pt-16 space-y-6">
-      <h1 className="text-3xl font-bold mb-4">Support Vector Regression </h1>
+    <div className="max-w-full mx-auto p-6 pt-16 space-y-6 sm:max-w-5xl">
+      <h1 className="text-3xl font-bold text-blue-700">Support Vector Regression</h1>
 
       <section>
         <h2 className="text-2xl font-semibold mt-4">Introduction</h2>
@@ -19,70 +19,70 @@ const SVROverview = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> Key Concepts</h2>
+        <h2 className="text-2xl font-semibold mt-4">Key Concepts</h2>
         <ul className="list-disc pl-6">
-          <li><b>ε-insensitive tube:</b> A zone around the regression line where no penalty is given for prediction error.</li>
-          <li><b>Support Vectors:</b> Data points that lie outside the ε-tube; these determine the model.</li>
-          <li><b>Flatness:</b> Keeping the weight vector <code>w</code> small minimizes model complexity.</li>
-          <li><b>Slack variables:</b> <code>ξᵢ, ξᵢ*</code> allow flexibility for points outside the ε-tube (soft margin).</li>
-          <li><b>Kernel Trick:</b> A technique to transform data to higher dimensions to capture nonlinearity.</li>
+          <li><b>ε-insensitive tube:</b> No penalty within the ε margin.</li>
+          <li><b>Support Vectors:</b> Points outside the ε-tube.</li>
+          <li><b>Flatness:</b> Keeps the weight vector small.</li>
+          <li><b>Slack variables:</b> <code>ξᵢ, ξᵢ*</code> allow soft margin.</li>
+          <li><b>Kernel Trick:</b> Transforms data into higher dimensions.</li>
         </ul>
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> SVR Objective: Mathematical Formulation</h2>
-     <p>
+        <h2 className="text-2xl font-semibold mt-4">SVR Objective: Mathematical Formulation</h2>
+        <p>
+          <p>
   {"Given a dataset D = {(x₁ , y₁), ..., (xₙ, yₙ)}, we want to find:"}
-  <br />
-  <code>{"f(x) = wᵀx + b"} with {"|yᵢ - f(xᵢ)| ≤ ε"} for most points.</code>
 </p>
 
-
-        <p>
-          Objective:
           <br />
-          <code>
-            minimize (1/2)‖w‖² + C Σ (ξᵢ + ξᵢ*) <br />
-            subject to:
-            <ul className="list-disc pl-6">
-              <li>yᵢ - wᵀxᵢ - b ≤ ε + ξᵢ</li>
-              <li>wᵀxᵢ + b - yᵢ ≤ ε + ξᵢ*</li>
-              <li>ξᵢ, ξᵢ* ≥ 0</li>
-            </ul>
-          </code>
+          <code>f(x) = wᵀx + b</code> with <code>|yᵢ - f(xᵢ)| ≤ ε</code> for most points.
         </p>
+        <p className="mt-2">
+          Objective:
+        </p>
+        <code className="block mt-1 mb-2">
+          minimize (1/2)‖w‖² + C Σ (ξᵢ + ξᵢ*) <br />
+          subject to:
+        </code>
+        <ul className="list-disc pl-6">
+          <li>yᵢ - wᵀxᵢ - b ≤ ε + ξᵢ</li>
+          <li>wᵀxᵢ + b - yᵢ ≤ ε + ξᵢ*</li>
+          <li>ξᵢ, ξᵢ* ≥ 0</li>
+        </ul>
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> Kernel Functions in SVR</h2>
-        <table className="w-full table-auto border mt-2">
-          <thead>
-            <tr className="bg-gray-200">
-              <th className="border px-4 py-2">Kernel</th>
-              <th className="border px-4 py-2">Formula</th>
-              <th className="border px-4 py-2">Use Case</th>
+        <h2 className="text-2xl font-semibold mt-4">Kernel Functions in SVR</h2>
+        <table className="table-auto w-full text-sm border border-gray-300 text-left break-words mt-2">
+          <thead className="bg-gray-100">
+            <tr>
+              <th className="border px-3 py-2">Kernel</th>
+              <th className="border px-3 py-2">Formula</th>
+              <th className="border px-3 py-2">Use Case</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border px-4 py-2">Linear</td>
-              <td className="border px-4 py-2">K(xᵢ, xⱼ) = xᵢᵀxⱼ</td>
-              <td className="border px-4 py-2">Linearly separable data</td>
+              <td className="border px-3 py-2">Linear</td>
+              <td className="border px-3 py-2">K(xᵢ, xⱼ) = xᵢᵀxⱼ</td>
+              <td className="border px-3 py-2">Linearly separable data</td>
             </tr>
             <tr>
-              <td className="border px-4 py-2">Polynomial</td>
-              <td className="border px-4 py-2">K(xᵢ, xⱼ) = (γxᵢᵀxⱼ + r)ᵈ</td>
-              <td className="border px-4 py-2">Polynomial relationships</td>
+              <td className="border px-3 py-2">Polynomial</td>
+              <td className="border px-3 py-2">K(xᵢ, xⱼ) = (γxᵢᵀxⱼ + r)ᵈ</td>
+              <td className="border px-3 py-2">Polynomial relationships</td>
             </tr>
             <tr>
-              <td className="border px-4 py-2">RBF (Gaussian)</td>
-              <td className="border px-4 py-2">K(xᵢ, xⱼ) = exp(−γ‖xᵢ − xⱼ‖²)</td>
-              <td className="border px-4 py-2">Nonlinear, most common</td>
+              <td className="border px-3 py-2">RBF (Gaussian)</td>
+              <td className="border px-3 py-2">K(xᵢ, xⱼ) = exp(−γ‖xᵢ − xⱼ‖²)</td>
+              <td className="border px-3 py-2">Nonlinear, most common</td>
             </tr>
             <tr>
-              <td className="border px-4 py-2">Sigmoid</td>
-              <td className="border px-4 py-2">K(xᵢ, xⱼ) = tanh(γxᵢᵀxⱼ + r)</td>
-              <td className="border px-4 py-2">Neural network-like</td>
+              <td className="border px-3 py-2">Sigmoid</td>
+              <td className="border px-3 py-2">K(xᵢ, xⱼ) = tanh(γxᵢᵀxⱼ + r)</td>
+              <td className="border px-3 py-2">Neural network-like</td>
             </tr>
           </tbody>
         </table>
@@ -90,7 +90,7 @@ const SVROverview = () => {
 
       <section>
         <h2 className="text-2xl font-semibold mt-4">Python Example with Scikit-learn</h2>
-        <pre className="bg-gray-100 p-4 rounded text-sm overflow-x-auto">
+        <pre className="bg-gray-100 p-4 rounded text-sm whitespace-pre-wrap break-words">
 {`from sklearn.svm import SVR
 import numpy as np
 import matplotlib.pyplot as plt
@@ -112,24 +112,24 @@ plt.show()`}
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> Advantages</h2>
+        <h2 className="text-2xl font-semibold mt-4">Advantages</h2>
         <ul className="list-disc pl-6">
-          <li> Works for both linear and nonlinear regression.</li>
-          <li> Robust to outliers due to ε-insensitive loss.</li>
-          <li> Flexible with different kernel choices.</li>
-          <li> Handles high-dimensional data well.</li>
+          <li>Works for both linear and nonlinear regression.</li>
+          <li>Robust to outliers due to ε-insensitive loss.</li>
+          <li>Flexible with different kernel choices.</li>
+          <li>Handles high-dimensional data well.</li>
         </ul>
 
         <h2 className="text-2xl font-semibold mt-4">Disadvantages</h2>
         <ul className="list-disc pl-6">
-          <li> Computationally expensive.</li>
-          <li> Needs careful tuning of C, ε, and γ.</li>
-          <li> Less interpretable than simpler models.</li>
+          <li>Computationally expensive.</li>
+          <li>Needs careful tuning of C, ε, and γ.</li>
+          <li>Less interpretable than simpler models.</li>
         </ul>
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> Performance Metrics</h2>
+        <h2 className="text-2xl font-semibold mt-4">Performance Metrics</h2>
         <ul className="list-disc pl-6">
           <li><b>MAE:</b> Mean Absolute Error</li>
           <li><b>MSE:</b> Mean Squared Error</li>
@@ -139,8 +139,8 @@ plt.show()`}
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> Hyperparameter Tuning</h2>
-        <pre className="bg-gray-100 p-4 rounded text-sm overflow-x-auto">
+        <h2 className="text-2xl font-semibold mt-4">Hyperparameter Tuning</h2>
+        <pre className="bg-gray-100 p-4 rounded text-sm whitespace-pre-wrap break-words">
 {`from sklearn.model_selection import GridSearchCV
 
 param_grid = {
@@ -158,7 +158,7 @@ print("Best parameters:", grid.best_params_)`}
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> Advanced Topics</h2>
+        <h2 className="text-2xl font-semibold mt-4">Advanced Topics</h2>
         <ul className="list-disc pl-6">
           <li>Dual Problem: Solved using Lagrange multipliers</li>
           <li>KKT Conditions: Optimality conditions</li>
@@ -168,7 +168,7 @@ print("Best parameters:", grid.best_params_)`}
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> When to Use SVR?</h2>
+        <h2 className="text-2xl font-semibold mt-4">When to Use SVR?</h2>
         <ul className="list-disc pl-6">
           <li>You need robust regression that can ignore small errors.</li>
           <li>Data has nonlinear trends and other models overfit.</li>
@@ -178,7 +178,7 @@ print("Best parameters:", grid.best_params_)`}
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> Real-World Applications</h2>
+        <h2 className="text-2xl font-semibold mt-4">Real-World Applications</h2>
         <ul className="list-disc pl-6">
           <li>Stock price prediction</li>
           <li>House price estimation</li>
@@ -188,29 +188,14 @@ print("Best parameters:", grid.best_params_)`}
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-4"> Summary Table</h2>
-        <table className="w-full table-auto border mt-2">
+        <h2 className="text-2xl font-semibold mt-4">Summary Table</h2>
+        <table className="table-auto w-full text-sm border border-gray-300 text-left break-words">
           <tbody>
-            <tr>
-              <td className="border px-4 py-2 font-medium">Type</td>
-              <td className="border px-4 py-2">Supervised Regression</td>
-            </tr>
-            <tr>
-              <td className="border px-4 py-2 font-medium">Based On</td>
-              <td className="border px-4 py-2">Support Vector Machine</td>
-            </tr>
-            <tr>
-              <td className="border px-4 py-2 font-medium">Strengths</td>
-              <td className="border px-4 py-2">Robust, effective for non-linear problems</td>
-            </tr>
-            <tr>
-              <td className="border px-4 py-2 font-medium">Weaknesses</td>
-              <td className="border px-4 py-2">Slow, sensitive to hyperparameters</td>
-            </tr>
-            <tr>
-              <td className="border px-4 py-2 font-medium">Key Parameters</td>
-              <td className="border px-4 py-2">C, epsilon, kernel, gamma</td>
-            </tr>
+            <tr><td className="border px-3 py-2 font-medium">Type</td><td className="border px-3 py-2">Supervised Regression</td></tr>
+            <tr><td className="border px-3 py-2 font-medium">Based On</td><td className="border px-3 py-2">Support Vector Machine</td></tr>
+            <tr><td className="border px-3 py-2 font-medium">Strengths</td><td className="border px-3 py-2">Robust, effective for non-linear problems</td></tr>
+            <tr><td className="border px-3 py-2 font-medium">Weaknesses</td><td className="border px-3 py-2">Slow, sensitive to hyperparameters</td></tr>
+            <tr><td className="border px-3 py-2 font-medium">Key Parameters</td><td className="border px-3 py-2">C, epsilon, kernel, gamma</td></tr>
           </tbody>
         </table>
       </section>

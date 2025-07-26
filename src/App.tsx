@@ -71,17 +71,20 @@ function AppContent() {
 
         {/* Sidebar */}
         <aside
-          className={`
-            ${isMobile ? "fixed top-0 left-0 h-full z-40 transition-transform duration-300 bg-white shadow-lg" : "sticky top-0"}
-            w-64 overflow-y-auto bg-gray-100 p-6
-            ${isMobile ? (isSidebarOpen ? "translate-x-0" : "-translate-x-full") : ""}
-          `}
-        >
-          <Sidebar />
-        </aside>
+  className={`
+    ${isMobile ? "fixed top-16 left-0 h-full z-40 transition-transform duration-300 bg-white shadow-lg" : "sticky top-16"}
+    w-64 overflow-y-auto bg-gray-100 p-6
+    ${isMobile ? (isSidebarOpen ? "translate-x-0" : "-translate-x-full") : ""}
+  `}
+>
+  <Sidebar />
+</aside>
+
 
         {/* Main content */}
-        <main className="flex-1 p-4 md:p-8">
+      <main className="flex-1 p-0">
+
+
           <Routes>
             <Route path="/" element={<Navigate to="/ml/introduction" replace />} />
             <Route path="/ml/introduction" element={<MLIntroduction />} />

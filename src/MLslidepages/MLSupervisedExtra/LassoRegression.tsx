@@ -1,12 +1,13 @@
-
 //import React from "react";
 
 const LassoRegression = () => {
   return (
-       <div className="max-w-5xl mx-auto p-6 pt-16 space-y-6">
-      <h1 className="text-3xl font-bold mb-4">Lasso Regression</h1>
+    <div className="max-w-full px-4 py-6 sm:max-w-5xl mx-auto space-y-6">
+      <h1 className="text-3xl font-bold mb-4  text-blue-600">Lasso Regression</h1>
 
-      <p><strong>What is Lasso Regression?</strong><br />
+      <p>
+        <strong>What is Lasso Regression?</strong>
+        <br />
         Lasso Regression (Least Absolute Shrinkage and Selection Operator) is a linear regression technique using <strong>L1 regularization</strong> to:
       </p>
       <ul className="list-disc list-inside my-2 ml-4">
@@ -14,9 +15,9 @@ const LassoRegression = () => {
         <li>Perform automatic feature selection (set some coefficients to exactly zero)</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-6"> Key Concepts</h2>
-      <div className="overflow-x-auto mt-2">
-        <table className="min-w-full border border-collapse border-gray-300 text-sm sm:text-base">
+      <h2 className="text-1xl font-semibold mt-6"> Key Concepts</h2>
+      <div className="overflow-x-hidden mt-2">
+        <table className="w-full border border-collapse border-gray-300 text-sm sm:text-base break-words">
           <thead className="bg-gray-200">
             <tr>
               <th className="border px-3 py-2 text-left">Term</th>
@@ -44,23 +45,23 @@ const LassoRegression = () => {
         </table>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-6"> Mathematical Formulation</h2>
+      <h2 className="text-1xl font-semibold mt-6"> Mathematical Formulation</h2>
       <p>Objective Function:</p>
-      <pre className="bg-gray-100 p-2 rounded overflow-auto text-sm">
+      <pre className="bg-gray-100 p-2 rounded overflow-hidden whitespace-pre-wrap break-words text-sm">
         <code>
           min(‖y − Xβ‖² + λ ∑ |β<sub>j</sub>|)
         </code>
       </pre>
 
-      <h2 className="text-2xl font-semibold mt-6"> Intuition</h2>
+      <h2 className="text-1xl font-semibold mt-6"> Intuition</h2>
       <p>
         Lasso minimizes both the prediction error and the total weight of coefficients.
         As <code>λ</code> increases, more coefficients shrink to zero, simplifying the model.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-6"> Comparison with Other Methods</h2>
-      <div className="overflow-x-auto mt-2">
-        <table className="min-w-full border border-collapse border-gray-300 text-sm sm:text-base">
+      <h2 className="text-1xl font-semibold mt-6"> Comparison with Other Methods</h2>
+      <div className="overflow-x-hidden mt-2">
+        <table className="w-full border border-collapse border-gray-300 text-sm sm:text-base break-words">
           <thead className="bg-gray-200">
             <tr>
               <th className="border px-2 py-2 text-left">Method</th>
@@ -98,8 +99,8 @@ const LassoRegression = () => {
         </table>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-6"> Python Example with scikit-learn</h2>
-      <pre className="bg-gray-900 text-white text-sm p-4 rounded overflow-auto">
+      <h2 className="text-1xl font-semibold mt-6"> Python Example with scikit-learn</h2>
+      <pre className="bg-gray-900 text-white text-sm p-4 rounded overflow-hidden whitespace-pre-wrap break-words">
         <code>
 {`from sklearn.linear_model import Lasso
 from sklearn.model_selection import train_test_split
@@ -123,21 +124,21 @@ print("Coefficients:", lasso.coef_)`}
         </code>
       </pre>
 
-      <h2 className="text-2xl font-semibold mt-6"> Advantages</h2>
+      <h2 className="text-1xl font-semibold mt-6"> Advantages</h2>
       <ul className="list-disc list-inside ml-4 my-2">
         <li>Performs automatic feature selection</li>
         <li>Reduces overfitting</li>
         <li>Simpler and more interpretable models</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-6"> Disadvantages</h2>
+      <h2 className="text-1xl font-semibold mt-6"> Disadvantages</h2>
       <ul className="list-disc list-inside ml-4 my-2">
         <li>Can perform poorly when features are highly correlated</li>
         <li>Can be unstable — small data changes affect feature selection</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-6"> Hyperparameter Tuning</h2>
-      <pre className="bg-gray-900 text-white text-sm p-4 rounded overflow-auto">
+      <h2 className="text-1xl font-semibold mt-6"> Hyperparameter Tuning</h2>
+      <pre className="bg-gray-900 text-white text-sm p-4 rounded overflow-hidden whitespace-pre-wrap break-words">
         <code>
 {`from sklearn.linear_model import LassoCV
 
@@ -148,16 +149,16 @@ print("Best alpha:", lasso_cv.alpha_)`}
         </code>
       </pre>
 
-      <h2 className="text-2xl font-semibold mt-6"> Real-World Applications</h2>
+      <h2 className="text-1xl font-semibold mt-6"> Real-World Applications</h2>
       <ul className="list-disc list-inside ml-4 my-2">
         <li>Genomics: Select a few genes from thousands</li>
         <li>Finance: Key predictors for stock returns</li>
         <li>Marketing: Identify influential customer behaviors</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-6"> Summary</h2>
-      <div className="overflow-x-auto mt-2">
-        <table className="min-w-full border border-collapse border-gray-300 text-sm sm:text-base">
+      <h2 className="text-1xl font-semibold mt-6"> Summary</h2>
+      <div className="overflow-x-hidden mt-2">
+        <table className="w-full border border-collapse border-gray-300 text-sm sm:text-base break-words">
           <thead className="bg-gray-200">
             <tr>
               <th className="border px-3 py-2 text-left">Aspect</th>
@@ -166,20 +167,20 @@ print("Best alpha:", lasso_cv.alpha_)`}
           </thead>
           <tbody>
             <tr>
-              <td className="border px-3 py-2">Type</td>
-              <td className="border px-3 py-2">Linear with L1 Regularization</td>
+              <td className="border px-3 py-2 text-left">Type</td>
+              <td className="border px-3 py-2 text-left">Linear with L1 Regularization</td>
             </tr>
             <tr>
-              <td className="border px-3 py-2">Goal</td>
-              <td className="border px-3 py-2">Shrink coefficients, remove irrelevant features</td>
+              <td className="border px-3 py-2 text-left">Goal</td>
+              <td className="border px-3 py-2 text-left">Shrink coefficients, remove irrelevant features</td>
             </tr>
             <tr>
-              <td className="border px-3 py-2">Feature Selection</td>
-              <td className="border px-3 py-2"> Yes</td>
+              <td className="border px-3 py-2 text-left">Feature Selection</td>
+              <td className="border px-3 py-2 text-left"> Yes</td>
             </tr>
             <tr>
-              <td className="border px-3 py-2">Scaling Needed</td>
-              <td className="border px-3 py-2"> Yes</td>
+              <td className="border px-3 py-2 text-left">Scaling Needed</td>
+              <td className="border px-3 py-2 text-left"> Yes</td>
             </tr>
           </tbody>
         </table>

@@ -1,6 +1,6 @@
 const RidgeRegression = () => {
   return (
-    <div className="max-w-full sm:max-w-3xl md:max-w-5xl mx-auto p-4 sm:p-6 pt-16 space-y-6">
+<div className="max-w-full px-4 py-6 sm:max-w-5xl mx-auto space-y-6">
       <h1 className="text-2xl sm:text-3xl font-bold mb-4">Ridge Regression</h1>
 
       <h2 className="text-xl sm:text-2xl font-semibold mt-6">What is Ridge Regression?</h2>

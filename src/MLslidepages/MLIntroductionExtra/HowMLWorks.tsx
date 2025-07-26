@@ -1,17 +1,17 @@
-//import React from "react";
+// import React from "react";
 
 export default function HowMLWorks() {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-6 space-y-6">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center sm:text-left">
+    <div className="max-w-full sm:max-w-3xl mx-auto px-4 sm:px-6 pt-4 sm:pt-10 pb-10 space-y-6">
+      <h1 className="text-xl sm:text-3xl font-bold mb-6 text-center sm:text-left text-blue-600">
         How Do Machine Learning Algorithms Work?
       </h1>
 
-      <p className="text-base sm:text-lg">
+      <p className="text-sm sm:text-base text-gray-800">
         Machine Learning algorithms work by learning patterns from data and using those patterns to make decisions or predictions. This process involves several key steps:
       </p>
 
-      <ol className="list-decimal list-inside space-y-6 text-base sm:text-lg">
+      <ol className="list-decimal list-inside space-y-6 text-sm sm:text-base text-gray-700">
         {/* Step 1 */}
         <li>
           <p className="flex items-start">
@@ -24,7 +24,7 @@ export default function HowMLWorks() {
             <li>Training set (to learn)</li>
             <li>Testing set (to evaluate)</li>
           </ul>
-          <p className="mt-2 italic text-gray-600">
+          <p className="mt-2 italic text-gray-500">
             Example: Customer data, images, text, sensor logs.
           </p>
         </li>
@@ -37,7 +37,7 @@ export default function HowMLWorks() {
               <strong>Feature Extraction:</strong> Important characteristics (features) are selected or created to help the model learn better.
             </span>
           </p>
-          <p className="mt-2 italic text-gray-600">
+          <p className="mt-2 italic text-gray-500">
             Example: Email spam detection might use features like the number of links or specific keywords.
           </p>
         </li>
@@ -65,7 +65,7 @@ export default function HowMLWorks() {
               <strong>Training the Model:</strong> Feed the training data into the model. It learns patterns by minimizing errors and adjusting internal parameters.
             </span>
           </p>
-          <p className="mt-2 italic text-gray-600">
+          <p className="mt-2 italic text-gray-500">
             Example: In image classification, the model learns features distinguishing cats from dogs.
           </p>
         </li>
@@ -95,7 +95,7 @@ export default function HowMLWorks() {
               <strong>Prediction:</strong> The trained model can now make predictions on new, unseen data.
             </span>
           </p>
-          <p className="mt-2 italic text-gray-600">
+          <p className="mt-2 italic text-gray-500">
             Example: Predicting house prices or recommending products.
           </p>
         </li>

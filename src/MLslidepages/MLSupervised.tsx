@@ -6,8 +6,9 @@ export default function MLSupervised() {
   const goTo = (path: string) => navigate(path);
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6 mt-20">
-      <h1 className="text-3xl font-bold mb-4 text-blue-700">Supervised Machine Learning</h1>
+     <div className="max-w-4xl mx-auto p-6 pt-16 space-y-6">
+
+      <h1 className="text-2xl font-bold mb-4 text-blue-700">Supervised Machine Learning</h1>
 
       <p>
         <strong>Supervised Machine Learning</strong> is a type of machine learning where the algorithm is trained on a <strong>labeled dataset</strong>. The goal is for the model to learn the mapping from input features (<code>X</code>) to the output/target (<code>Y</code>) and make predictions on unseen data.

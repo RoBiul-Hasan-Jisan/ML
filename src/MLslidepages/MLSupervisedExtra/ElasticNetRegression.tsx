@@ -2,11 +2,11 @@
 
 const ElasticNetRegression = () => {
   return (
-    <div className="max-w-5xl mx-auto p-6 pt-16 space-y-6">
-      <h1 className="text-3xl font-bold mb-4">Elastic Net Regression </h1>
+    <div className="max-w-full px-4 py-6 sm:max-w-5xl mx-auto space-y-6">
+      <h1 className="text-3xl font-bold mb-4  text-blue-600">Elastic Net Regression </h1>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-6"> What is Elastic Net Regression?</h2>
+        <h2 className="text-1xl font-semibold mt-6"> What is Elastic Net Regression?</h2>
         <p>
           Elastic Net Regression is a linear regression model combining:
         </p>
@@ -20,11 +20,11 @@ const ElasticNetRegression = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-6"> Objective Function (Mathematical Formulation)</h2>
+        <h2 className="text-1xl font-semibold mt-6"> Objective Function (Mathematical Formulation)</h2>
         <p>
           Elastic Net minimizes:
         </p>
-        <pre className="bg-gray-100 p-3 rounded overflow-auto text-sm">
+        <pre className="bg-gray-100 p-3 rounded overflow-hidden whitespace-pre-wrap break-words text-sm">
           <code>
             {`Loss = ||y - Xβ||₂² + λ₁ ∑|β_j| + λ₂ ∑β_j²`}
           </code>
@@ -32,7 +32,7 @@ const ElasticNetRegression = () => {
         <p className="mt-2">
           Or equivalently in scikit-learn form:
         </p>
-        <pre className="bg-gray-100 p-3 rounded overflow-auto text-sm">
+        <pre className="bg-gray-100 p-3 rounded overflow-hidden whitespace-pre-wrap break-words text-sm">
           <code>
             {`Loss = ||y - Xβ||₂² + α * (ρ * ||β||₁ + (1 - ρ) * ||β||₂²)`}
           </code>
@@ -49,9 +49,9 @@ const ElasticNetRegression = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-6"> Intuition Behind Elastic Net</h2>
-        <div className="overflow-x-auto mt-2">
-          <table className="min-w-full border border-collapse border-gray-300 text-sm sm:text-base">
+        <h2 className="text-1xl font-semibold mt-6"> Intuition Behind Elastic Net</h2>
+        <div className="overflow-x-hidden mt-2">
+          <table className="w-full table-auto border border-collapse border-gray-300 text-sm sm:text-base break-words">
             <thead className="bg-gray-200">
               <tr>
                 <th className="border px-2 py-2 text-left">Model</th>
@@ -85,7 +85,7 @@ const ElasticNetRegression = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-6"> Why Use Elastic Net?</h2>
+        <h2 className="text-1xl font-semibold mt-6"> Why Use Elastic Net?</h2>
         <p><strong>Pros:</strong></p>
         <ul className="list-disc list-inside ml-6">
           <li>Combines best of Lasso and Ridge</li>
@@ -101,7 +101,7 @@ const ElasticNetRegression = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-6"> Use Cases</h2>
+        <h2 className="text-1xl font-semibold mt-6"> Use Cases</h2>
         <ul className="list-disc list-inside ml-6">
           <li>Genomics (thousands of genes, few relevant)</li>
           <li>Text classification (sparse data)</li>
@@ -111,10 +111,10 @@ const ElasticNetRegression = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-6"> Scikit-learn Implementation</h2>
+        <h2 className="text-1xl font-semibold mt-6"> Scikit-learn Implementation</h2>
 
         <p><strong>Basic Example:</strong></p>
-        <pre className="bg-gray-900 text-white p-4 rounded overflow-auto text-sm">
+        <pre className="bg-gray-900 text-white p-4 rounded overflow-hidden whitespace-pre-wrap break-words text-sm">
           <code>
 {`from sklearn.linear_model import ElasticNet
 
@@ -125,7 +125,7 @@ y_pred = model.predict(X_test)`}
         </pre>
 
         <p className="mt-4"><strong>Hyperparameter tuning with cross-validation:</strong></p>
-        <pre className="bg-gray-900 text-white p-4 rounded overflow-auto text-sm">
+        <pre className="bg-gray-900 text-white p-4 rounded overflow-hidden whitespace-pre-wrap break-words text-sm">
           <code>
 {`from sklearn.linear_model import ElasticNetCV
 
@@ -143,9 +143,9 @@ print("Best l1_ratio:", model_cv.l1_ratio_)`}
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-6"> Elastic Net vs Ridge vs Lasso</h2>
-        <div className="overflow-x-auto mt-2">
-          <table className="min-w-full border border-collapse border-gray-300 text-sm sm:text-base">
+        <h2 className="text-1xl font-semibold mt-6"> Elastic Net vs Ridge vs Lasso</h2>
+        <div className="overflow-x-hidden mt-2">
+          <table className="w-full border border-collapse border-gray-300 text-sm sm:text-base break-words">
             <thead className="bg-gray-200">
               <tr>
                 <th className="border px-2 py-2 text-left">Feature</th>
@@ -191,7 +191,7 @@ print("Best l1_ratio:", model_cv.l1_ratio_)`}
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-6">  Visual Comparison (Intuition)</h2>
+        <h2 className="text-1xl font-semibold mt-6">  Visual Comparison (Intuition)</h2>
         <ul className="list-disc list-inside ml-6">
           <li>Lasso: Sparse models (many zeros)</li>
           <li>Ridge: Dense models (all coefficients shrunk, none zero)</li>
@@ -207,9 +207,9 @@ print("Best l1_ratio:", model_cv.l1_ratio_)`}
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mt-6">  Summary</h2>
-        <div className="overflow-x-auto mt-2">
-          <table className="min-w-full border border-collapse border-gray-300 text-sm sm:text-base">
+        <h2 className="text-1xl font-semibold mt-6">  Summary</h2>
+        <div className="overflow-x-hidden mt-2">
+          <table className="w-full border border-collapse border-gray-300 text-sm sm:text-base break-words">
             <thead className="bg-gray-200">
               <tr>
                 <th className="border px-3 py-2 text-left">Aspect</th>
@@ -218,28 +218,28 @@ print("Best l1_ratio:", model_cv.l1_ratio_)`}
             </thead>
             <tbody>
               <tr>
-                <td className="border px-3 py-2">Model Type</td>
-                <td className="border px-3 py-2">Linear Regression + L1 + L2</td>
+                <td className="border px-3 py-2 text-left">Model Type</td>
+                <td className="border px-3 py-2 text-left">Linear Regression + L1 + L2</td>
               </tr>
               <tr>
-                <td className="border px-3 py-2">Key Hyperparameters</td>
-                <td className="border px-3 py-2">α, l1_ratio</td>
+                <td className="border px-3 py-2 text-left">Key Hyperparameters</td>
+                <td className="border px-3 py-2 text-left">α, l1_ratio</td>
               </tr>
               <tr>
-                <td className="border px-3 py-2">Feature Selection</td>
-                <td className="border px-3 py-2"> Yes</td>
+                <td className="border px-3 py-2 text-left">Feature Selection</td>
+                <td className="border px-3 py-2 text-left"> Yes</td>
               </tr>
               <tr>
-                <td className="border px-3 py-2">Handles Multicollinearity</td>
-                <td className="border px-3 py-2"> Yes</td>
+                <td className="border px-3 py-2 text-left">Handles Multicollinearity</td>
+                <td className="border px-3 py-2 text-left"> Yes</td>
               </tr>
               <tr>
-                <td className="border px-3 py-2">Suitable for High-Dimensional Data</td>
-                <td className="border px-3 py-2"> Yes</td>
+                <td className="border px-3 py-2 text-left">Suitable for High-Dimensional Data</td>
+                <td className="border px-3 py-2 text-left"> Yes</td>
               </tr>
               <tr>
-                <td className="border px-3 py-2">Scikit-learn Classes</td>
-                <td className="border px-3 py-2">ElasticNet, ElasticNetCV</td>
+                <td className="border px-3 py-2 text-left">Scikit-learn Classes</td>
+                <td className="border px-3 py-2 text-left">ElasticNet, ElasticNetCV</td>
               </tr>
             </tbody>
           </table>

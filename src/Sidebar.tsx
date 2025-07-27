@@ -11,16 +11,32 @@ export default function Sidebar() {
     { name: "Reinforcement Learning", to: "/ml/reinforcement" },
   ];
 
-  const supervisedDetails = [
+  const supervisedR = [
     { name: "Linear Regression", to: "/ml/supervised/linear-regression" },
-    { name: "Logistic Regression", to: "/ml/supervised/logistic-regression" },
     { name: "Decision Tree", to: "/ml/supervised/decision-tree" },
     { name: "Random Forest", to: "/ml/supervised/random-forest" },
     { name: "SVR", to: "/ml/supervised/svr" },
     { name: "Ridge Regression", to: "/ml/supervised/ridge" },
     { name: "Lasso Regression", to: "/ml/supervised/lasso" },
     { name: "Elastic Net", to: "/ml/supervised/elastic-net" },
+   
+    
   ];
+
+    const supervisedC = [
+  
+    { name: "Logistic Regression", to: "/ml/supervised/logistic-regression" },
+    { name: "KNN", to: "/ml/supervised/knn" },
+    { name: "LDA", to: "/ml/supervised/lda" },
+    { name: "QDA", to: "/ml/supervised/qda" },
+    { name: "Perceptron", to: "/ml/supervised/perceptron" },
+     { name: "Decision-tree", to: "/ml/supervised/decision-treec" },
+     { name: "SVM", to: "/ml/supervised/svm" },
+     { name: "Naive-bayes", to: "/ml/supervised/naive-bayes" },
+     { name: "Random-forest", to: "/ml/supervised/random-forests" },
+    
+  ];
+
 
   const linearAlgorithms = [
     { name: "Simple Linear Regression", to: "/ml/supervised/simple-linear-regression" },
@@ -29,7 +45,10 @@ export default function Sidebar() {
   ];
 
   const miscLinks = [
-    { name: "Regression Algorithms Overview", to: "/regression-algorithms" },
+    { name: "Regression Algorithms Overview", to: "/regression-algorithms-s" },
+    { name: "ClassificationAlgorithms Overview", to: "/classification-algorithms-s" },
+ 
+  
   ];
 
   const linkClass = (path: string) =>
@@ -51,8 +70,20 @@ export default function Sidebar() {
       </ul>
 
       <div className="mt-6 font-semibold text-gray-700">Supervised Details</div>
+      <div className="mt-6 font-semibold text-gray-700">Regression</div>
       <ul className="space-y-1 ml-4 mt-2">
-        {supervisedDetails.map(({ name, to }) => (
+        {supervisedR.map(({ name, to }) => (
+          <li key={to}>
+            <NavLink to={to} className={linkClass(to)}>
+              {name}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+      <h1></h1>
+      <div className="mt-6 font-semibold text-gray-700">Classification</div>
+      <ul className="space-y-1 ml-4 mt-2">
+        {supervisedC.map(({ name, to }) => (
           <li key={to}>
             <NavLink to={to} className={linkClass(to)}>
               {name}

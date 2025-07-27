@@ -9,14 +9,14 @@ import {
 
 import Header from "./Header";
 import Sidebar from "./Sidebar"; // import Sidebar here
-import RegressionAlgorithms from "./RegressionAlgorithms";
+
 
 // Import other pages as before
 import MLIntroduction from "./MLslidepages/MLIntroduction";
 import MLSupervised from "./MLslidepages/MLSupervised";
 import MLUnsupervised from "./MLslidepages/MLUnsupervised";
 import MLReinforcement from "./MLslidepages/MLReinforcement";
-
+//MlSupervised Regression and classification 
 import LinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegression";
 import LogisticRegression from "./MLslidepages/MLSupervisedExtra/LogisticRegression";
 import DecisionTreeRegression from "./MLslidepages/MLSupervisedExtra/DecisionTreeRegression";
@@ -25,6 +25,19 @@ import SVRO from "./MLslidepages/MLSupervisedExtra/SVRO";
 import RidgeRegression from "./MLslidepages/MLSupervisedExtra/RidgeRegression";
 import LassoRegression from "./MLslidepages/MLSupervisedExtra/LassoRegression";
 import ElasticNetRegression from "./MLslidepages/MLSupervisedExtra/ElasticNetRegression";
+import KNNGuide from "./MLslidepages/MLSupervisedExtra/KNNGuide";
+import LDAGuide from "./MLslidepages/MLSupervisedExtra/LDAGuide";
+import QDAGuide from "./MLslidepages/MLSupervisedExtra/QDAGuide";
+import PerceptronGuide from "./MLslidepages/MLSupervisedExtra/PerceptronGuide";
+import DecisionTreeGuide from "./MLslidepages/MLSupervisedExtra/DecisionTreeGuide";
+import SVMGuide from "./MLslidepages/MLSupervisedExtra/SVMGuide";
+import NaiveBayesGuide from "./MLslidepages/MLSupervisedExtra/NaiveBayesGuide";
+import RandomForestGuide from "./MLslidepages/MLSupervisedExtra/RandomForestGuide";
+import ClassificationAlgorithmsGuide from "./MLslidepages/ClassificationAlgorithmsGuide";
+
+
+
+import RegressionAlgorithmsGuide from "./MLslidepages/RegressionAlgorithmsGuide";
 
 import SimpleLinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/SimpleLinearRegression";
 import MultipleLinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/MultipleLinearRegression";
@@ -102,7 +115,20 @@ function AppContent() {
             <Route path="/ml/supervised/simple-linear-regression" element={<SimpleLinearRegression />} />
             <Route path="/ml/supervised/multiple-linear-regression" element={<MultipleLinearRegression />} />
             <Route path="/ml/supervised/polynomial-regression" element={<PolynomialRegression />} />
-            <Route path="/regression-algorithms" element={<RegressionAlgorithms />} />
+            <Route path="/ml/supervised/knn" element={<KNNGuide />} />
+            <Route path="/ml/supervised/lda" element={<LDAGuide />} />
+            <Route path="/ml/supervised/qda" element={<QDAGuide />} />
+            <Route path="/ml/supervised/perceptron" element={<PerceptronGuide/>} />
+            <Route path="/ml/supervised/decision-treec" element={<DecisionTreeGuide/>} />
+            <Route path="/ml/supervised/svm" element={<SVMGuide/>} />
+            <Route path="/ml/supervised/naive-bayes" element={<NaiveBayesGuide/>} />
+            <Route path="/ml/supervised/random-forests" element={<RandomForestGuide/>} />
+
+
+
+            <Route path="/regression-algorithms-s" element={<RegressionAlgorithmsGuide />} />
+           <Route path="/classification-algorithms-s" element={<ClassificationAlgorithmsGuide/>} />
+           
             <Route path="*" element={<Navigate to="/ml/introduction" replace />} />
           </Routes>
         </main>

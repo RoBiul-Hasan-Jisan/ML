@@ -45,15 +45,28 @@ import ExtraTreesGuide from "./MLslidepages/MLSupervisedExtra/ExtraTreesGuide";
 import FeatureEngineeringGuide from "./MLslidepages/MLSupervisedExtra/FeatureEngineeringGuide";
 
 
-
-
-
-
 import RegressionAlgorithmsGuide from "./MLslidepages/RegressionAlgorithmsGuide";
-
 import SimpleLinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/SimpleLinearRegression";
 import MultipleLinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/MultipleLinearRegression";
 import PolynomialRegression from "./MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/PolynomialRegression";
+
+
+import KMeansClustering from "./MLslidepages/MLUnsupervisedExtra/KMeansClustering";
+import DBSCANGuide from "./MLslidepages/MLUnsupervisedExtra/DBSCANGuide";
+import HierarchicalClustering from "./MLslidepages/MLUnsupervisedExtra/HierarchicalClustering";
+import MeanShiftClustering from "./MLslidepages/MLUnsupervisedExtra/MeanShiftClustering";
+import GaussianMixtureModel from "./MLslidepages/MLUnsupervisedExtra/GaussianMixtureModel";
+import SpectralClustering from "./MLslidepages/MLUnsupervisedExtra/SpectralClustering";
+import OPTICSClustering from "./MLslidepages/MLUnsupervisedExtra/OPTICSClustering";
+import BIRCHClustering from "./MLslidepages/MLUnsupervisedExtra/BIRCHClustering";
+import AffinityPropagationGuide from "./MLslidepages/MLUnsupervisedExtra/AffinityPropagationGuide";
+
+
+
+
+
+
+
 
 function AppContent() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -143,13 +156,18 @@ function AppContent() {
             <Route path="/ml/supervised/stacking" element={<StackingGuide/>} />
             <Route path="/ml/supervised/bagging" element={<BaggingGuide/>} />
             <Route path="/ml/supervised/extra-trees" element={<ExtraTreesGuide/>} />
-             <Route path="/ml/supervised/fe" element={<FeatureEngineeringGuide/>} />
+            <Route path="/ml/supervised/fe" element={<FeatureEngineeringGuide/>} />
 
-
-
-
-
-            
+    <Route path="/ml/unsupervised/K-Means" element={<KMeansClustering/>} />
+   <Route path="/ml/unsupervised/dbscan" element={<DBSCANGuide/>} />
+   <Route path="/ml/unsupervised/hierarchical" element={<HierarchicalClustering/>} />
+   <Route path="/ml/unsupervised/mean-shift" element={<MeanShiftClustering/>} />
+<Route path="/ml/unsupervised/gmm" element={<GaussianMixtureModel/>} />
+<Route path="/ml/unsupervised/spectral" element={<SpectralClustering/>} />
+<Route path="/ml/unsupervised/OP" element={<OPTICSClustering/>} />
+<Route path="/ml/unsupervised/BIRCH" element={<BIRCHClustering/>} />
+<Route path="/ml/unsupervised/affinity" element={<AffinityPropagationGuide/>} />
+       
             
             <Route path="/regression-algorithms-s" element={<RegressionAlgorithmsGuide />} />
            <Route path="/classification-algorithms-s" element={<ClassificationAlgorithmsGuide/>} />

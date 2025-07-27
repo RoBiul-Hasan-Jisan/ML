@@ -1,4 +1,3 @@
-// src/Sidebar.tsx
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -17,8 +16,6 @@ const SidebarSection: React.FC<SectionProps> = ({ title, links, initiallyOpen = 
   const [isOpen, setIsOpen] = useState(initiallyOpen);
 
   const toggleOpen = () => setIsOpen(!isOpen);
-
-  // Create unique id for aria attributes
   const listId = title.toLowerCase().replace(/\s+/g, "-") + "-list";
 
   return (
@@ -92,11 +89,13 @@ const supervisedClassification: LinkItem[] = [
   { name: "LDA", to: "/ml/supervised/lda" },
   { name: "QDA", to: "/ml/supervised/qda" },
   { name: "Perceptron", to: "/ml/supervised/perceptron" },
-  { name: "Decision Tree", to: "/ml/supervised/decision-treec" },
+  { name: "Decision Tree (Classification)", to: "/ml/supervised/decision-treeclassification" },
   { name: "SVM", to: "/ml/supervised/svm" },
   { name: "Naive Bayes", to: "/ml/supervised/naive-bayes" },
   { name: "Random Forest", to: "/ml/supervised/random-forests" },
 ];
+
+
 
 const linearAlgorithms: LinkItem[] = [
   { name: "Simple Linear Regression", to: "/ml/supervised/simple-linear-regression" },
@@ -121,6 +120,20 @@ const miscLinks: LinkItem[] = [
   { name: "Classification Algorithms Overview", to: "/classification-algorithms-s" },
 ];
 
+
+const unsupervisedItems: LinkItem[] = [
+  { name: "K-Means", to: "/ml/unsupervised/K-Means" },
+  { name: "dbscan", to: "/ml/unsupervised/dbscan" },
+   { name: "Hierarchical", to: "/ml/unsupervised/hierarchical" },
+     { name: "Mean-shift", to: "/ml/unsupervised/mean-shift" },
+     { name: "GMM", to: "/ml/unsupervised/gmm" },
+      { name: "Spectral", to: "/ml/unsupervised/spectral" },
+       { name: "OPTICS ", to: "/ml/unsupervised/OP " },
+        { name: "BIRCH", to: "/ml/unsupervised/BIRCH" },
+        { name: "Affinity Propagation", to: "/ml/unsupervised/affinity" },
+
+  
+];
 export default function Sidebar() {
   return (
     <nav className="w-64 min-h-screen bg-gray-100 p-6 sticky top-0 overflow-y-auto shadow-lg">
@@ -149,6 +162,9 @@ export default function Sidebar() {
       <SidebarSection title="Linear Algorithms" links={linearAlgorithms} />
       <SidebarSection title="Methods" links={methods} />
       <SidebarSection title="More" links={miscLinks} />
+
+
+       <SidebarSection title="Unsupervised Learning - Clustering " links={unsupervisedItems} />
 
       <hr className="my-6 border-gray-300" />
 

@@ -67,7 +67,7 @@ export default function MLSupervised() {
             <li onClick={() => goTo("/ml/supervised/qda")} className="text-blue-600 cursor-pointer hover:underline">🔷 Quadratic Discriminant Analysis (QDA)</li>
             <li onClick={() => goTo("/ml/supervised/perceptron")} className="text-blue-600 cursor-pointer hover:underline">🔷 Perceptron</li>
             <li onClick={() => goTo("/ml/supervised/knn")} className="text-blue-600 cursor-pointer hover:underline">🔷 k-Nearest Neighbors (KNN)</li>
-            <li onClick={() => goTo("/ml/supervised/decision-tree")} className="text-blue-600 cursor-pointer hover:underline">🔷 Decision Trees</li>
+            <li onClick={() => goTo("/ml/supervised/treeclassification")} className="text-blue-600 cursor-pointer hover:underline">🔷 Decision Trees</li>
             <li onClick={() => goTo("/ml/supervised/svm")} className="text-blue-600 cursor-pointer hover:underline">🔷 Support Vector Machines (SVM)</li>
             <li onClick={() => goTo("/ml/supervised/naive-bayes")} className="text-blue-600 cursor-pointer hover:underline">🔷 Naive Bayes</li>
             <li onClick={() => goTo("/ml/supervised/random-forest")} className="text-blue-600 cursor-pointer hover:underline">🔷 Random Forest Classifier</li>

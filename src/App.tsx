@@ -34,6 +34,18 @@ import SVMGuide from "./MLslidepages/MLSupervisedExtra/SVMGuide";
 import NaiveBayesGuide from "./MLslidepages/MLSupervisedExtra/NaiveBayesGuide";
 import RandomForestGuide from "./MLslidepages/MLSupervisedExtra/RandomForestGuide";
 import ClassificationAlgorithmsGuide from "./MLslidepages/ClassificationAlgorithmsGuide";
+import GradientBoostingGuide from "./MLslidepages/MLSupervisedExtra/GradientBoostingGuide";
+import AdaBoostGuide from "./MLslidepages/MLSupervisedExtra/AdaBoostGuide";
+import XGBoostGuide from "./MLslidepages/MLSupervisedExtra/XGBoostGuide";
+import LightGBMGuide from "./MLslidepages/MLSupervisedExtra/LightGBMGuide";
+import CatBoostGuide from "./MLslidepages/MLSupervisedExtra/CatBoostGuide";
+import StackingGuide from "./MLslidepages/MLSupervisedExtra/StackingGuide";
+import BaggingGuide from "./MLslidepages/MLSupervisedExtra/BaggingGuide";
+import ExtraTreesGuide from "./MLslidepages/MLSupervisedExtra/ExtraTreesGuide";
+import FeatureEngineeringGuide from "./MLslidepages/MLSupervisedExtra/FeatureEngineeringGuide";
+
+
+
 
 
 
@@ -123,11 +135,25 @@ function AppContent() {
             <Route path="/ml/supervised/svm" element={<SVMGuide/>} />
             <Route path="/ml/supervised/naive-bayes" element={<NaiveBayesGuide/>} />
             <Route path="/ml/supervised/random-forests" element={<RandomForestGuide/>} />
+            <Route path="/ml/supervised/gbm" element={<GradientBoostingGuide/>} />
+            <Route path="/ml/supervised/adaboost" element={<AdaBoostGuide/>} />
+            <Route path="/ml/supervised/xgboost" element={<XGBoostGuide/>} />
+            <Route path="/ml/supervised/lightgbm" element={<LightGBMGuide/>} />
+            <Route path="/ml/supervised/catboost" element={<CatBoostGuide/>} />
+            <Route path="/ml/supervised/stacking" element={<StackingGuide/>} />
+            <Route path="/ml/supervised/bagging" element={<BaggingGuide/>} />
+            <Route path="/ml/supervised/extra-trees" element={<ExtraTreesGuide/>} />
+             <Route path="/ml/supervised/fe" element={<FeatureEngineeringGuide/>} />
 
 
 
+
+
+            
+            
             <Route path="/regression-algorithms-s" element={<RegressionAlgorithmsGuide />} />
            <Route path="/classification-algorithms-s" element={<ClassificationAlgorithmsGuide/>} />
+          
            
             <Route path="*" element={<Navigate to="/ml/introduction" replace />} />
           </Routes>

@@ -87,9 +87,12 @@ export default function MLSupervised() {
             <li onClick={() => goTo("/ml/supervised/stacking")} className="text-blue-600 cursor-pointer hover:underline">🔷 Stacking</li>
             <li onClick={() => goTo("/ml/supervised/bagging")} className="text-blue-600 cursor-pointer hover:underline">🔷 Bagging</li>
             <li onClick={() => goTo("/ml/supervised/extra-trees")} className="text-blue-600 cursor-pointer hover:underline">🔷 Extra Trees</li>
+          <li onClick={() => goTo("/ml/supervised/fe")} className="text-blue-600 cursor-pointer hover:underline">🔷Feature Engineering </li>
+          
           </ul>
         </div>
       </div>
+      
 
       <div className="bg-green-100 p-4 rounded-md shadow-sm">
         <h2 className="text-xl font-semibold mb-2">🧠 Summary</h2>

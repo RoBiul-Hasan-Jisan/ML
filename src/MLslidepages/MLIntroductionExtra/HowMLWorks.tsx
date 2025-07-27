@@ -15,7 +15,7 @@ export default function HowMLWorks() {
         {/* Step 1 */}
         <li>
           <p className="flex items-start">
-            <span className="mr-2">📥</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Input Data:</strong> Raw data is collected from various sources (databases, sensors, web, etc.) and cleaned, formatted, and split into:
             </span>
@@ -32,7 +32,7 @@ export default function HowMLWorks() {
         {/* Step 2 */}
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🧠</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Feature Extraction:</strong> Important characteristics (features) are selected or created to help the model learn better.
             </span>
@@ -45,7 +45,7 @@ export default function HowMLWorks() {
         {/* Step 3 */}
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🔍</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Model Selection:</strong> Choose an algorithm based on the problem type:
             </span>
@@ -60,7 +60,7 @@ export default function HowMLWorks() {
         {/* Step 4 */}
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🏋️</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Training the Model:</strong> Feed the training data into the model. It learns patterns by minimizing errors and adjusting internal parameters.
             </span>
@@ -73,7 +73,7 @@ export default function HowMLWorks() {
         {/* Step 5 */}
         <li>
           <p className="flex items-start">
-            <span className="mr-2">📊</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Evaluation:</strong> Test the model using the testing dataset and evaluate its performance using appropriate metrics:
             </span>
@@ -90,7 +90,7 @@ export default function HowMLWorks() {
         {/* Step 6 */}
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🤖</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Prediction:</strong> The trained model can now make predictions on new, unseen data.
             </span>
@@ -103,7 +103,7 @@ export default function HowMLWorks() {
         {/* Step 7 */}
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🔁</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Improvement and Tuning:</strong> Improve the model’s performance by:
             </span>

@@ -14,7 +14,7 @@ export default function WhyML() {
       <ol className="list-decimal list-inside space-y-6 text-base sm:text-lg">
         <li>
           <div className="flex items-start mb-1">
-            <span className="mr-2 text-2xl leading-none">🤖</span>
+            <span className="mr-2 text-2xl leading-none"></span>
             <strong>Automation of Tasks</strong>
           </div>
           <p>
@@ -30,7 +30,7 @@ export default function WhyML() {
 
         <li>
           <div className="flex items-start mb-1">
-            <span className="mr-2 text-2xl leading-none">📊</span>
+            <span className="mr-2 text-2xl leading-none"></span>
             <strong>Handling Large-Scale and Complex Data</strong>
           </div>
           <p>
@@ -45,7 +45,7 @@ export default function WhyML() {
 
         <li>
           <div className="flex items-start mb-1">
-            <span className="mr-2 text-2xl leading-none">🎯</span>
+            <span className="mr-2 text-2xl leading-none"></span>
             <strong>Improved Accuracy Over Time</strong>
           </div>
           <p>
@@ -56,7 +56,7 @@ export default function WhyML() {
 
         <li>
           <div className="flex items-start mb-1">
-            <span className="mr-2 text-2xl leading-none">⚡</span>
+            <span className="mr-2 text-2xl leading-none"></span>
             <strong>Real-Time Decision Making</strong>
           </div>
           <p>
@@ -72,7 +72,7 @@ export default function WhyML() {
 
         <li>
           <div className="flex items-start mb-1">
-            <span className="mr-2 text-2xl leading-none">🔁</span>
+            <span className="mr-2 text-2xl leading-none"></span>
             <strong>Adaptability to Change</strong>
           </div>
           <p>
@@ -87,7 +87,7 @@ export default function WhyML() {
 
         <li>
           <div className="flex items-start mb-1">
-            <span className="mr-2 text-2xl leading-none">🔍</span>
+            <span className="mr-2 text-2xl leading-none"></span>
             <strong>Pattern Recognition and Insight Discovery</strong>
           </div>
           <p>

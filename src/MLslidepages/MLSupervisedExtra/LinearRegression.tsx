@@ -56,40 +56,41 @@ export default function LinearRegression() {
         </p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">Types of Linear Regression</h2>
-        <table className="w-full border-collapse border border-gray-300">
-          <thead>
-            <tr className="bg-gray-200">
-              <th className="border border-gray-300 p-2 text-left">Type</th>
-              <th className="border border-gray-300 p-2 text-left">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              className="cursor-pointer hover:bg-gray-100"
-              onClick={() => handleRowClick('/SimpleLinearRegression')}
-            >
-              <td className="border border-gray-300 p-2 text-blue-600">Simple Linear Regression</td>
-              <td className="border border-gray-300 p-2">1 input variable (X), 1 output (Y)</td>
-            </tr>
-            <tr
-              className="bg-gray-50 cursor-pointer hover:bg-gray-100"
-              onClick={() => handleRowClick('/MultipleLinearRegression')}
-            >
-              <td className="border border-gray-300 p-2 text-blue-600">Multiple Linear Regression</td>
-              <td className="border border-gray-300 p-2">Multiple inputs (X₁, X₂, ..., Xₙ), 1 output (Y)</td>
-            </tr>
-            <tr
-              className="cursor-pointer hover:bg-gray-100"
-              onClick={() => handleRowClick('/PolynomialRegression')}
-            >
-              <td className="border border-gray-300 p-2 text-blue-600">Polynomial Regression</td>
-              <td className="border border-gray-300 p-2">X is raised to power (non-linear but linear in coefficients)</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+     <section className="space-y-3">
+  <h2 className="text-2xl font-semibold">Types of Linear Regression</h2>
+  <table className="w-full border-collapse border border-gray-300">
+    <thead>
+      <tr className="bg-gray-200">
+        <th className="border border-gray-300 p-2 text-left">Type</th>
+        <th className="border border-gray-300 p-2 text-left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="cursor-pointer hover:bg-gray-100"
+        onClick={() => handleRowClick('/ml/supervised/simple-linear-regression')}
+      >
+        <td className="border border-gray-300 p-2 text-blue-600">Simple Linear Regression</td>
+        <td className="border border-gray-300 p-2">1 input variable (X), 1 output (Y)</td>
+      </tr>
+      <tr
+        className="bg-gray-50 cursor-pointer hover:bg-gray-100"
+        onClick={() => handleRowClick('/ml/supervised/multiple-linear-regression')}
+      >
+        <td className="border border-gray-300 p-2 text-blue-600">Multiple Linear Regression</td>
+        <td className="border border-gray-300 p-2">Multiple inputs (X₁, X₂, ..., Xₙ), 1 output (Y)</td>
+      </tr>
+      <tr
+        className="cursor-pointer hover:bg-gray-100"
+        onClick={() => handleRowClick('/ml/supervised/polynomial-regression')}
+      >
+        <td className="border border-gray-300 p-2 text-blue-600">Polynomial Regression</td>
+        <td className="border border-gray-300 p-2">X is raised to power (non-linear but linear in coefficients)</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold">Real-World Example: House Price Prediction</h2>

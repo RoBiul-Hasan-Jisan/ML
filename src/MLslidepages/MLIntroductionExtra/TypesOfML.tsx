@@ -19,7 +19,7 @@ export default function TypesOfML({ goTo }: TypesOfMLProps) {
         onClick={() => goTo("/ml/supervised")}
         className="cursor-pointer border-l-4 border-green-500 bg-green-50 hover:bg-green-100 rounded p-4 shadow hover:shadow-lg transition"
       >
-        <h2 className="text-lg sm:text-xl font-semibold mb-1">✅ Supervised Learning</h2>
+        <h2 className="text-lg sm:text-xl font-semibold mb-1"> Supervised Learning</h2>
         <p>
           <strong>Definition:</strong> The model learns from labeled data.<br />
           <strong>Goal:</strong> Learn a mapping from input to output.<br />
@@ -37,7 +37,7 @@ export default function TypesOfML({ goTo }: TypesOfMLProps) {
         onClick={() => goTo("/ml/unsupervised")}
         className="cursor-pointer border-l-4 border-blue-500 bg-blue-50 hover:bg-blue-100 rounded p-4 shadow hover:shadow-lg transition"
       >
-        <h2 className="text-lg sm:text-xl font-semibold mb-1">🧩 Unsupervised Learning</h2>
+        <h2 className="text-lg sm:text-xl font-semibold mb-1"> Unsupervised Learning</h2>
         <p>
           <strong>Definition:</strong> The model is given unlabeled data.<br />
           <strong>Goal:</strong> Discover hidden patterns or structure.<br />
@@ -54,7 +54,7 @@ export default function TypesOfML({ goTo }: TypesOfMLProps) {
       <div
         className="cursor-pointer border-l-4 border-yellow-500 bg-yellow-50 hover:bg-yellow-100 rounded p-4 shadow hover:shadow-lg transition"
       >
-        <h2 className="text-lg sm:text-xl font-semibold mb-1">⚖️ Semi-Supervised Learning</h2>
+        <h2 className="text-lg sm:text-xl font-semibold mb-1"> Semi-Supervised Learning</h2>
         <p>
           <strong>Definition:</strong> Combines small labeled with large unlabeled data.<br />
           <strong>Use Case:</strong> When labeling is expensive.<br />
@@ -71,7 +71,7 @@ export default function TypesOfML({ goTo }: TypesOfMLProps) {
         onClick={() => goTo("/ml/reinforcement")}
         className="cursor-pointer border-l-4 border-purple-500 bg-purple-50 hover:bg-purple-100 rounded p-4 shadow hover:shadow-lg transition"
       >
-        <h2 className="text-lg sm:text-xl font-semibold mb-1">🎮 Reinforcement Learning</h2>
+        <h2 className="text-lg sm:text-xl font-semibold mb-1"> Reinforcement Learning</h2>
         <p>
           <strong>Definition:</strong> An agent learns via feedback from actions.<br />
           <strong>Goal:</strong> Maximize cumulative rewards.<br />

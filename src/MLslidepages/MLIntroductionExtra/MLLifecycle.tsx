@@ -17,7 +17,7 @@ export default function MLLifecycle() {
       <ol className="list-decimal list-inside space-y-8 text-sm sm:text-base text-gray-800">
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🎯</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Problem Definition:</strong> Clearly define the goal of the ML project.
               <br />
@@ -36,7 +36,7 @@ export default function MLLifecycle() {
 
         <li>
           <p className="flex items-start">
-            <span className="mr-2">📥</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Data Collection:</strong> Gather relevant and sufficient data from various sources (databases, APIs, sensors, user logs, etc.).
               <div className="mt-1 text-gray-600">
@@ -48,7 +48,7 @@ export default function MLLifecycle() {
 
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🧹</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Data Cleaning & Preparation:</strong> Handle missing values, duplicates, outliers, and inconsistent formats.
               <br />
@@ -59,7 +59,7 @@ export default function MLLifecycle() {
 
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🛠️</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Feature Engineering:</strong> Select or create relevant features that help the model understand the data better.
               <ul className="list-disc list-inside ml-6 mt-2">
@@ -73,7 +73,7 @@ export default function MLLifecycle() {
 
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🧠</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Model Selection:</strong> Choose the right algorithm based on:
               <ul className="list-disc list-inside ml-6 mt-2">
@@ -97,7 +97,7 @@ export default function MLLifecycle() {
 
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🏋️</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Model Training:</strong> Feed the training data into the chosen model. The model learns by adjusting internal parameters to reduce error/loss.
             </span>
@@ -106,7 +106,7 @@ export default function MLLifecycle() {
 
         <li>
           <p className="flex items-start">
-            <span className="mr-2">📊</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Model Evaluation:</strong> Evaluate the trained model using the test data.
               <ul className="list-disc list-inside ml-6 mt-2">
@@ -119,7 +119,7 @@ export default function MLLifecycle() {
 
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🎯</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Hyperparameter Tuning:</strong> Improve model performance by adjusting hyperparameters (not learned by the model).
               <ul className="list-disc list-inside ml-6 mt-2">
@@ -136,7 +136,7 @@ export default function MLLifecycle() {
 
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🚀</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Deployment:</strong> Deploy the model into a production environment (app, website, server).
               <div className="mt-1 text-gray-600">
@@ -148,7 +148,7 @@ export default function MLLifecycle() {
 
         <li>
           <p className="flex items-start">
-            <span className="mr-2">🔧</span>
+            <span className="mr-2"></span>
             <span>
               <strong>Monitoring & Maintenance:</strong> Continuously monitor the model’s performance.
               <ul className="list-disc list-inside ml-6 mt-2">

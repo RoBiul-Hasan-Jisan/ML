@@ -2,8 +2,8 @@
 
 export default function MLvsTraditional() {
   return (
-    <div className="px-4 sm:px-6 py-6 max-w-4xl mx-auto text-gray-800">
-      <h2 className="text-lg sm:text-2xl font-semibold mb-6 mt-8 text-center sm:text-left text-blue-700">
+    <div className="px-4 sm:px-6  max-w-4xl mx-auto text-gray-800">
+      <h2 className="text-lg sm:text-2xl font-semibold mb-6 mt-4 text-center sm:text-left text-blue-700">
         How it Differs from Traditional Programming
       </h2>
 

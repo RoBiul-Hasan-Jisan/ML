@@ -1,7 +1,18 @@
-// ClassificationAlgorithmsGuide.tsx
+//import React from "react";
+
+type Algorithm = {
+  title: string;
+  what: string;
+  when: string;
+  why: string;
+  use: string;
+};
 
 export default function ClassificationAlgorithmsGuide() {
-  const algorithms = [
+
+
+
+  const algorithms: Algorithm[] = [
     {
       title: " 1. Logistic Regression",
       what: "Linear model for binary/multi-class classification.",
@@ -102,7 +113,7 @@ export default function ClassificationAlgorithmsGuide() {
     },
   ];
 
-  const summary = [
+  const summary: [string, string, string][] = [
     ["Logistic Regression", "Linearly separable problems", "Interpretable, fast"],
     ["KNN", "Local patterns, small datasets", "Simple, no training"],
     ["SVM", "High-dimensional, complex data", "Robust, kernel-powered"],
